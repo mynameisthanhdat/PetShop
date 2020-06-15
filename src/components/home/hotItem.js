@@ -1,10 +1,51 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
-const CardDeal = ({ type, price }) => {
+const data = [
+    {
+        name: 'Alaska',
+        price: 7000000,
+        img: require('../../images/clothing.png')
+    },
+    {
+        name: 'Alaska',
+        price: 7000000,
+        img: require('../../images/clothing.png')
+    },
+    {
+        name: 'Alaska',
+        price: 7000000,
+        img: require('../../images/clothing.png')
+    },
+    {
+        name: 'Alaska',
+        price: 7000000,
+        img: require('../../images/clothing.png')
+    },
+    {
+        name: 'Alaska',
+        price: 7000000,
+        img: require('../../images/clothing.png')
+    },
+    {
+        name: 'Alaska',
+        price: 7000000,
+        img: require('../../images/clothing.png')
+    },
+    {
+        name: 'Alaska',
+        price: 7000000,
+        img: require('../../images/clothing.png')
+    },
+    {
+        name: 'Alaska',
+        price: 7000000,
+        img: require('../../images/clothing.png')
+    },
+]
+const HotItem = ({ type, price, onPress }) => {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
             <View style={styles.container}>
                 <Image
                     source={require('../../images/clothing.png')}
@@ -13,7 +54,7 @@ const CardDeal = ({ type, price }) => {
                 <View style={styles.body}>
                     <Text style={styles.bodyTitle}>{type}</Text>
                     <Text style={styles.bodyPrice}>
-                        {price} <Text style={styles.bodyPriceOri}>$19</Text>
+                        {price} VNĐ <Text style={styles.bodyPriceOri}></Text>
                     </Text>
                     <Text style={styles.bodyTime}>Ends in 05:21:46</Text>
                 </View>
@@ -25,7 +66,7 @@ const CardDeal = ({ type, price }) => {
     );
 };
 
-export default CardDeal;
+export default HotItem;
 
 const styles = StyleSheet.create({
     container: {

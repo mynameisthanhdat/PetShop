@@ -1,19 +1,16 @@
 import React from 'react';
 import {
-    SafeAreaView,
-    StyleSheet,
-    ScrollView,
     View,
-    Text,
-    StatusBar,
-    TouchableOpacity
 } from 'react-native';
+import Slide from '../components/detail/slide';
+import Info from '../components/detail/info';
 
 const Detail = () => {
     return (
-        <TouchableOpacity onPress={onPress}>
-            <Text>Detail page</Text>
-        </TouchableOpacity>
+        <View>
+            <Slide />
+            <Info />
+        </View>
     )
 }
 export default Detail;

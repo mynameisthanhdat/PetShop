@@ -8,7 +8,7 @@ import {
     Dimensions,
 } from 'react-native';
 
-const Card = ({ title, onPress }) => {
+const AllOfItem = ({ title, onPress }) => {
     return (
         <TouchableOpacity style={styles.container} onPress={onPress}>
             <View style={styles.cardContainer}>
@@ -24,7 +24,7 @@ const Card = ({ title, onPress }) => {
     );
 };
 
-export default Card;
+export default AllOfItem;
 
 const styles = StyleSheet.create({
     image: {

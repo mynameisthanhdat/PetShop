@@ -1,8 +1,6 @@
 import React from 'react';
 import {
-    SafeAreaView,
     StyleSheet,
-    ScrollView,
     View,
     Text,
     Image,
@@ -10,32 +8,58 @@ import {
     Dimensions,
     FlatList
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
 
 const data = [
     {
         name: 'Alaska',
         img: require('../images/alaska.jpg'),
-        info: 'something...'
+        gentle: 'Đực',
+        source: 'Việt Nam',
+        char: 'Lông dày - đen trắng, mắt xanh',
+        longevity: 'Lên đến tới 16 năm',
+        old: '4 tháng',
+        price: 7000000,
     },
     {
         name: 'Alaska',
         img: require('../images/alaska.jpg'),
-        info: 'something...'
+        gentle: 'Cái',
+        source: 'Việt Nam',
+        char: 'Lông dày - đen trắng, mắt xanh',
+        longevity: 'Lên đến tới 16 năm',
+        old: '4 tháng',
+        price: 7000000,
     },
     {
         name: 'Alaska',
         img: require('../images/alaska.jpg'),
-        info: 'something...'
+        gentle: 'Đực',
+        source: 'Việt Nam',
+        char: 'Lông dày - đen trắng, mắt xanh',
+        longevity: 'Lên đến tới 16 năm',
+        old: '4 tháng',
+        price: 7000000,
     },
     {
         name: 'Alaska',
         img: require('../images/alaska.jpg'),
-        info: 'something...'
+        gentle: 'Cái',
+        source: 'Việt Nam',
+        char: 'Lông dày - đen trắng, mắt xanh',
+        longevity: 'Lên đến tới 16 năm',
+        old: '4 tháng',
+        price: 7000000,
     },
     {
         name: 'Alaska',
         img: require('../images/alaska.jpg'),
-        info: 'something...'
+        gentle: 'Đực',
+        source: 'Việt Nam',
+        char: 'Lông dày - đen trắng, mắt xanh',
+        longevity: 'Lên đến tới 16 năm',
+        old: '4 tháng',
+        price: 7000000,
     },
 ]
 const numColumns = 2;
@@ -48,24 +72,33 @@ export default class Home extends React.Component {
         };
     }
 
-    _navigateDetail = ({ navigation }) => {
-        navigation.push("Detail");
-    };
-
-    renderItem({ item, navigation }) {
+    renderItem = (item, navigation) => {
         return (
-            <TouchableOpacity onPress={() => navigation.navigate("Detail")} >
+            <TouchableOpacity onPress={() => navigation.navigate('Detail', item
+                // {
+                //     source: item.source,
+                //     char: item.char,
+                //     longevity: item.longevity,
+                //     price: item.price,
+                //     old: item.old,
+                //     img: item.img
+                // }
+            )} >
                 <View style={styles.item}>
                     <View style={styles.image_container}>
                         <Image style={styles.image} source={item.img} />
                     </View>
-                </View>
-                <View style={styles.nameInfo}>
-                    <View>
-                        <Text style={styles.name}>{item.name}</Text>
-                    </View>
-                    <View>
-                        <Text style={styles.info}>{item.info}</Text>
+                    <View style={styles.nameInfo}>
+                        <View>
+                            <Text style={styles.name}>{item.name}</Text>
+                        </View>
+                        <View>
+                            <Text style={styles.info}>Giống: {item.gentle}</Text>
+                        </View>
+                        <View style={{ flexDirection: 'row' }}>
+                            <Text>Xem ngay!!!</Text>
+                            <Icon name="arrow-right-circle" size={20} style={styles.iconVIew} />
+                        </View>
                     </View>
                 </View>
             </TouchableOpacity>
@@ -73,12 +106,12 @@ export default class Home extends React.Component {
     };
 
     render() {
+        const { navigation } = this.props;
         return (
             <FlatList
                 data={this.state.data}
                 style={styles.container}
-                renderItem={this.renderItem}
-                ItemSeparatorComponent={this.ItemSeparatorComponent}
+                renderItem={({ item }) => this.renderItem(item, navigation)}
                 numColumns={numColumns}
                 keyExtractor={(item, index) => index.toString()}
                 showsVerticalScrollIndicator={false}
@@ -90,26 +123,28 @@ export default class Home extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginVertical: 20,
+        // marginVertical: 10,
+        backgroundColor: '#F1EEEE'
     },
     item: {
-        flexDirection: 'row',
-        borderWidth: 1,
-        marginLeft: 10,
-        marginRight: 10,
+        width: '100%',
+        marginTop: 5,
+        backgroundColor: '#fff',
+        marginLeft: 6,
         marginBottom: 5,
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1,
-        height: Dimensions.get('window').width / numColumns, // approximate a square
+        height: Dimensions.get('window').width * 0.6, // approximate a square
+        width: Dimensions.get('window').width * 0.48,
     },
     image_container: {
-        width: '47%',
-        height: '100%',
-        alignItems: 'center'
+        width: '100%',
+        height: '70%',
+        alignItems: 'center',
     },
     image: {
-        width: 183,
+        width: '100%',
         height: '100%',
         resizeMode: 'cover',
         flex: 1
@@ -126,5 +161,10 @@ const styles = StyleSheet.create({
     },
     info: {
         fontSize: 15,
+    },
+    iconVIew: {
+        color: 'red',
+        marginLeft: 100,
+        position: 'absolute',
     }
 });

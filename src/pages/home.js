@@ -12,37 +12,37 @@ import Icon from 'react-native-vector-icons/Entypo';
 
 
 const data = [
-    'Dogs',
-    'Cats',
-    'Medecine',
-    'Food',
-    'Stuff',
-    'Other',
+    'Chó',
+    'Mèo',
+    'Thuốc',
+    'Thức ăn',
+    'Đồ dùng',
+    'Khác',
 ];
 const listdeal = [
     {
-        type: 'Navi coat',
-        price: '$9',
+        type: 'Chó Alaska',
+        price: '7000000',
     },
     {
-        type: 'Whale toy',
-        price: '$9',
+        type: 'Chó Husky',
+        price: '7500000',
     },
     {
-        type: 'Bear toy',
-        price: '$9',
+        type: 'Mèo Anh lông ngắn',
+        price: '4500000',
     },
     {
-        type: 'Navi coat',
-        price: '$9',
+        type: 'Thức ăn của chó',
+        price: '150000',
     },
     {
-        type: 'Whale toy',
-        price: '$9',
+        type: 'Thức ăn của mèo',
+        price: '120000',
     },
     {
-        type: 'Bear toy',
-        price: '$9',
+        type: 'Lồng nuôi mèo',
+        price: '350000',
     },
 ];
 import AllOfItem from '../components/home/allOfItem';
@@ -54,7 +54,7 @@ const Home = ({ navigation }) => {
         <SafeAreaView style={styles.container}>
             <ScrollView>
                 <View style={styles.listcardTop}>
-                    <Text style={styles.titleCatalogue}>Catalogue</Text>
+                    <Text style={styles.titleCatalogue}>Danh mục</Text>
                     <View style={styles.listcard}>
                         {data.map(e => {
                             return (
@@ -67,13 +67,15 @@ const Home = ({ navigation }) => {
                     <View style={styles.titlecontainer}>
                         <Text style={styles.title}>Hot</Text>
                         <TouchableOpacity style={styles.chevron}>
-                            <Text style={styles.seemore}>See more</Text>
+                            <Text style={styles.seemore}>Nhiều hơn</Text>
                             <Icon name="chevron-thin-right" size={18} />
                         </TouchableOpacity>
                     </View>
                     <View>
                         {listdeal.map(e => {
-                            return <HotItem {...e} />;
+                            return (
+                                <HotItem onPress={() => navigation.navigate("Detail")} {...e} />
+                            );
                         })}
                     </View>
                 </View>
