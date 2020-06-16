@@ -10,6 +10,9 @@ import History from './src/pages/history';
 import Header from './src/components/header/header';
 import Dogs from './src/pages/dogs';
 import Detail from './src/pages/detail';
+import Cart from './src/pages/cart';
+import Sale from './src/pages/sale';
+
 const Drawer = createDrawerNavigator();
 
 const HomeStack = createStackNavigator();
@@ -18,8 +21,11 @@ const HomeStackScreen = () => (
     <HomeStack.Screen name="Home" component={Home} />
     <HomeStack.Screen name="Dogs" component={Dogs} />
     <HomeStack.Screen name="Detail" component={Detail} />
+    <HomeStack.Screen name="Cart" component={Cart} />
+    <HomeStack.Screen name="Sale" component={Sale} />
   </HomeStack.Navigator>
 );
+
 
 export default function App() {
   return (
@@ -34,3 +40,5 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+console.disableYellowBox = true;

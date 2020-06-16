@@ -10,57 +10,18 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 
-
-const data = [
-    'Chó',
-    'Mèo',
-    'Thuốc',
-    'Thức ăn',
-    'Đồ dùng',
-    'Khác',
-];
-const listdeal = [
-    {
-        type: 'Chó Alaska',
-        price: '7000000',
-    },
-    {
-        type: 'Chó Husky',
-        price: '7500000',
-    },
-    {
-        type: 'Mèo Anh lông ngắn',
-        price: '4500000',
-    },
-    {
-        type: 'Thức ăn của chó',
-        price: '150000',
-    },
-    {
-        type: 'Thức ăn của mèo',
-        price: '120000',
-    },
-    {
-        type: 'Lồng nuôi mèo',
-        price: '350000',
-    },
-];
-import AllOfItem from '../components/home/allOfItem';
 import HotItem from '../components/home/hotItem';
+import Catalogy from '../components/home/catalogy';
 
 const Home = ({ navigation }) => {
-
     return (
         <SafeAreaView style={styles.container}>
-            <ScrollView>
+            <ScrollView
+                showsVerticalScrollIndicator={false}>
                 <View style={styles.listcardTop}>
                     <Text style={styles.titleCatalogue}>Danh mục</Text>
                     <View style={styles.listcard}>
-                        {data.map(e => {
-                            return (
-                                <AllOfItem onPress={() => navigation.navigate("Dogs")} title={e} />
-                            );
-                        })}
+                        <Catalogy nav={navigation} />
                     </View>
                 </View>
                 <View style={styles.listdeal}>
@@ -68,22 +29,17 @@ const Home = ({ navigation }) => {
                         <Text style={styles.title}>Hot</Text>
                         <TouchableOpacity style={styles.chevron}>
                             <Text style={styles.seemore}>Nhiều hơn</Text>
-                            <Icon name="chevron-thin-right" size={18} />
+                            <Icon name="chevron-thin-right" size={14} style={styles.iconRight} />
                         </TouchableOpacity>
                     </View>
                     <View>
-                        {listdeal.map(e => {
-                            return (
-                                <HotItem onPress={() => navigation.navigate("Detail")} {...e} />
-                            );
-                        })}
+                        <HotItem nav={navigation} />
                     </View>
                 </View>
                 <View style={{ marginTop: 30 }}></View>
             </ScrollView>
         </SafeAreaView>
     )
-
 }
 export default Home;
 
@@ -102,7 +58,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontWeight: 'bold',
-        fontSize: 18,
+        fontSize: 16,
         marginLeft: 2,
     },
     listdeal: {
@@ -112,14 +68,18 @@ const styles = StyleSheet.create({
     titleCatalogue: {
         fontWeight: 'bold',
         fontSize: 18,
-        marginVertical: 16,
+        marginVertical: 5,
         marginLeft: 20,
     },
     seemore: {
-        fontWeight: 'bold',
-        fontSize: 18,
-        color: 'gray',
-        marginRight: 7,
+        fontWeight: '700',
+        fontSize: 16,
+        color: '#81DAF5',
+        marginRight: 2,
+    },
+    iconRight: {
+        color: '#81DAF5',
+        marginTop: 2,
     },
     chevron: {
         flexDirection: 'row',

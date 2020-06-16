@@ -74,15 +74,17 @@ export default class Home extends React.Component {
 
     renderItem = (item, navigation) => {
         return (
-            <TouchableOpacity onPress={() => navigation.navigate('Detail', item
-                // {
-                //     source: item.source,
-                //     char: item.char,
-                //     longevity: item.longevity,
-                //     price: item.price,
-                //     old: item.old,
-                //     img: item.img
-                // }
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Detail',
+                {
+                    name: item.name,
+                    source: item.source,
+                    char: item.char,
+                    longevity: item.longevity,
+                    price: item.price,
+                    old: item.old,
+                    img: item.img,
+                    gentle: item.gentle
+                }
             )} >
                 <View style={styles.item}>
                     <View style={styles.image_container}>

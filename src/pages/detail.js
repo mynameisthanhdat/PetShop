@@ -5,11 +5,12 @@ import {
 import Slide from '../components/detail/slide';
 import Info from '../components/detail/info';
 
-const Detail = () => {
+const Detail = ({ navigation, route }) => {
+
     return (
         <View>
             <Slide />
-            <Info />
+            <Info nav={navigation} route={route} />
         </View>
     )
 }

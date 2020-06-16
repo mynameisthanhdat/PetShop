@@ -1,89 +1,110 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Dimensions } from 'react-native';
 
 const data = [
     {
         name: 'Alaska',
         price: 7000000,
-        img: require('../../images/clothing.png')
+        img: require('../../images/alaska.jpg')
     },
     {
         name: 'Alaska',
         price: 7000000,
-        img: require('../../images/clothing.png')
+        img: require('../../images/alaska.jpg')
     },
     {
         name: 'Alaska',
         price: 7000000,
-        img: require('../../images/clothing.png')
+        img: require('../../images/alaska.jpg')
     },
     {
         name: 'Alaska',
         price: 7000000,
-        img: require('../../images/clothing.png')
+        img: require('../../images/alaska.jpg')
     },
     {
         name: 'Alaska',
         price: 7000000,
-        img: require('../../images/clothing.png')
+        img: require('../../images/alaska.jpg')
     },
     {
         name: 'Alaska',
         price: 7000000,
-        img: require('../../images/clothing.png')
+        img: require('../../images/alaska.jpg')
     },
     {
         name: 'Alaska',
         price: 7000000,
-        img: require('../../images/clothing.png')
+        img: require('../../images/alaska.jpg')
     },
     {
         name: 'Alaska',
         price: 7000000,
-        img: require('../../images/clothing.png')
+        img: require('../../images/alaska.jpg')
     },
 ]
-const HotItem = ({ type, price, onPress }) => {
-    return (
-        <TouchableOpacity onPress={onPress}>
-            <View style={styles.container}>
-                <Image
-                    source={require('../../images/clothing.png')}
-                    style={styles.image}
-                />
-                <View style={styles.body}>
-                    <Text style={styles.bodyTitle}>{type}</Text>
-                    <Text style={styles.bodyPrice}>
-                        {price} VNĐ <Text style={styles.bodyPriceOri}></Text>
-                    </Text>
-                    <Text style={styles.bodyTime}>Ends in 05:21:46</Text>
+export default class HotItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: data,
+        }
+    }
+    renderItem(item, navigation) {
+        const { nav } = this.props;
+        return (
+            <TouchableOpacity onPress={() => nav.navigate('Sale')}>
+                <View style={styles.container}>
+                    <Image
+                        source={item.img}
+                        style={styles.image}
+                    />
+                    <View style={styles.body}>
+                        <Text style={styles.bodyTitle}>{item.name}</Text>
+                        <Text style={styles.bodyPrice}>
+                            {item.price} VNĐ <Text style={styles.bodyPriceOri}></Text>
+                        </Text>
+                        <Text style={styles.bodyTime}>Ends in 05:21:46</Text>
+                    </View>
+                    <View style={styles.saleOff}>
+                        <Text style={styles.saleOffText}>-30%</Text>
+                    </View>
                 </View>
-                <View style={styles.saleOff}>
-                    <Text style={styles.saleOffText}>-30%</Text>
-                </View>
-            </View>
-        </TouchableOpacity>
-    );
+            </TouchableOpacity>
+        )
+    }
+    render() {
+        const { navigation } = this.props;
+        return (
+            <FlatList
+                data={this.state.data}
+                style={styles.container1}
+                renderItem={({ item }) => this.renderItem(item, navigation)}
+                // numColumns={numColumns}
+                keyExtractor={(item, index) => index.toString()}
+                showsVerticalScrollIndicator={false}
+            />
+        )
+    }
+
 };
 
-export default HotItem;
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        shadowRadius: 13.97,
-        shadowOffset: { width: 5, height: 5 },
-        shadowColor: '#222',
-        shadowOpacity: 0.53,
-        elevation: 100,
         borderRadius: 8,
         padding: 15,
         backgroundColor: "#fff",
         marginTop: 10,
     },
+    container1: {
+        // backgroundColor: 'gray',
+        width: '100%'
+    },
     image: {
-        width: 50,
-        height: 50,
+        width: 70,
+        height: 70,
     },
     body: {
         flex: 1,
