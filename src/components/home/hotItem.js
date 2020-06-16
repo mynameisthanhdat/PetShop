@@ -3,44 +3,44 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Dimensions }
 
 const data = [
     {
-        name: 'Alaska',
-        price: 7000000,
-        img: require('../../images/alaska.jpg')
+        name: 'Thức ăn khô',
+        price: 1350000,
+        img: 'https://bizweb.dktcdn.net/100/346/633/products/1-a9351970-df75-4706-bb64-a1571249e671.jpg?v=1553844345187'
     },
     {
-        name: 'Alaska',
-        price: 7000000,
-        img: require('../../images/alaska.jpg')
+        name: 'Thức ăn khô',
+        price: 1350000,
+        img: 'https://bizweb.dktcdn.net/100/346/633/products/1-a9351970-df75-4706-bb64-a1571249e671.jpg?v=1553844345187'
     },
     {
-        name: 'Alaska',
-        price: 7000000,
-        img: require('../../images/alaska.jpg')
+        name: 'Thức ăn khô',
+        price: 1350000,
+        img: 'https://lh3.googleusercontent.com/proxy/AP9rnALq81BQJ5lNe4XddH8VlHBlchbA9ZjkIx_uMNlxOCJhkyyiriJlbpoX4_IjrxqYqDwf54k9DKxTdgtkmth-ot-ljHDQFxJSAA'
     },
     {
-        name: 'Alaska',
-        price: 7000000,
-        img: require('../../images/alaska.jpg')
+        name: 'Thức ăn khô',
+        price: 1350000,
+        img: 'https://bizweb.dktcdn.net/100/346/633/products/1-a9351970-df75-4706-bb64-a1571249e671.jpg?v=1553844345187'
     },
     {
-        name: 'Alaska',
-        price: 7000000,
-        img: require('../../images/alaska.jpg')
+        name: 'Thức ăn khô',
+        price: 1350000,
+        img: 'https://bizweb.dktcdn.net/100/346/633/products/1-a9351970-df75-4706-bb64-a1571249e671.jpg?v=1553844345187'
     },
     {
-        name: 'Alaska',
-        price: 7000000,
-        img: require('../../images/alaska.jpg')
+        name: 'Thức ăn khô',
+        price: 1350000,
+        img: 'https://lh3.googleusercontent.com/proxy/AP9rnALq81BQJ5lNe4XddH8VlHBlchbA9ZjkIx_uMNlxOCJhkyyiriJlbpoX4_IjrxqYqDwf54k9DKxTdgtkmth-ot-ljHDQFxJSAA'
     },
     {
-        name: 'Alaska',
-        price: 7000000,
-        img: require('../../images/alaska.jpg')
+        name: 'Thức ăn khô',
+        price: 1350000,
+        img: 'https://lh3.googleusercontent.com/proxy/AP9rnALq81BQJ5lNe4XddH8VlHBlchbA9ZjkIx_uMNlxOCJhkyyiriJlbpoX4_IjrxqYqDwf54k9DKxTdgtkmth-ot-ljHDQFxJSAA'
     },
     {
-        name: 'Alaska',
-        price: 7000000,
-        img: require('../../images/alaska.jpg')
+        name: 'Thức ăn khô',
+        price: 1350000,
+        img: 'https://lh3.googleusercontent.com/proxy/AP9rnALq81BQJ5lNe4XddH8VlHBlchbA9ZjkIx_uMNlxOCJhkyyiriJlbpoX4_IjrxqYqDwf54k9DKxTdgtkmth-ot-ljHDQFxJSAA'
     },
 ]
 export default class HotItem extends React.Component {
@@ -53,18 +53,22 @@ export default class HotItem extends React.Component {
     renderItem(item, navigation) {
         const { nav } = this.props;
         return (
-            <TouchableOpacity onPress={() => nav.navigate('Sale')}>
+            <TouchableOpacity onPress={() => nav.navigate('Sale', {
+                name: item.name,
+                price: item.price,
+                img: item.img
+            })}>
                 <View style={styles.container}>
                     <Image
-                        source={item.img}
+                        source={{ uri: item.img }}
                         style={styles.image}
                     />
                     <View style={styles.body}>
                         <Text style={styles.bodyTitle}>{item.name}</Text>
                         <Text style={styles.bodyPrice}>
-                            {item.price} VNĐ <Text style={styles.bodyPriceOri}></Text>
+                            {(item.price * 0.7).toFixed(0)} VNĐ
                         </Text>
-                        <Text style={styles.bodyTime}>Ends in 05:21:46</Text>
+                        <Text style={styles.bodyTime}>{item.price} VNĐ</Text>
                     </View>
                     <View style={styles.saleOff}>
                         <Text style={styles.saleOffText}>-30%</Text>
@@ -123,12 +127,8 @@ const styles = StyleSheet.create({
         marginVertical: 3,
     },
 
-    bodyPriceOri: {
-        color: '#222',
-        textDecorationLine: 'line-through',
-    },
-
     bodyTime: {
+        textDecorationLine: 'line-through',
         color: '#ABB0B8',
     },
 
