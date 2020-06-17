@@ -9,7 +9,7 @@ import {
     FlatList
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
-
+import Icon1 from 'react-native-vector-icons/FontAwesome5';
 const data = [
     {
         name: 'Alaska',
@@ -110,14 +110,21 @@ export default class Home extends React.Component {
     render() {
         const { navigation } = this.props;
         return (
-            <FlatList
-                data={this.state.data}
-                style={styles.container}
-                renderItem={({ item }) => this.renderItem(item, navigation)}
-                numColumns={numColumns}
-                keyExtractor={(item, index) => index.toString()}
-                showsVerticalScrollIndicator={false}
-            />
+            <View style={styles.container}>
+                <View>
+                    <TouchableOpacity style={styles.btn}>
+                        <Icon1 name='grin-hearts' size={20} style={styles.iconLove} />
+                        <Text style={styles.button}>Yêu thích</Text>
+                    </TouchableOpacity>
+                </View>
+                <FlatList
+                    data={this.state.data}
+                    renderItem={({ item }) => this.renderItem(item, navigation)}
+                    numColumns={numColumns}
+                    keyExtractor={(item, index) => index.toString()}
+                    showsVerticalScrollIndicator={false}
+                />
+            </View>
         )
     }
 }
@@ -137,7 +144,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1,
-        height: Dimensions.get('window').width * 0.6, // approximate a square
+        height: Dimensions.get('window').width * 0.7, // approximate a square
         width: Dimensions.get('window').width * 0.48,
     },
     image_container: {
@@ -159,7 +166,7 @@ const styles = StyleSheet.create({
     },
     name: {
         fontSize: 18,
-        fontWeight: 'bold'
+        fontWeight: '700'
     },
     info: {
         fontSize: 15,
@@ -168,5 +175,24 @@ const styles = StyleSheet.create({
         color: 'red',
         marginLeft: 100,
         position: 'absolute',
-    }
+    },
+    btn: {
+        width: '100%',
+        padding: 10,
+        borderWidth: 0.5,
+        backgroundColor: '#fff',
+        borderColor: '#FA58D0',
+        backgroundColor: '#FA58D0',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    button: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: '700',
+    },
+    iconLove: {
+        color: '#fff',
+        marginRight: 5,
+    },
 });

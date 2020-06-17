@@ -12,6 +12,7 @@ import Dogs from './src/pages/dogs';
 import Detail from './src/pages/detail';
 import Cart from './src/pages/cart';
 import Sale from './src/pages/sale';
+import Pay from './src/pages/pay';
 
 const Drawer = createDrawerNavigator();
 
@@ -23,6 +24,7 @@ const HomeStackScreen = () => (
     <HomeStack.Screen name="Detail" component={Detail} />
     <HomeStack.Screen name="Cart" component={Cart} />
     <HomeStack.Screen name="Sale" component={Sale} />
+    <HomeStack.Screen name="Pay" component={Pay} />
   </HomeStack.Navigator>
 );
 
@@ -31,7 +33,7 @@ export default function App() {
   return (
     <NavigationContainer>
       {/* <Header /> */}
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator initialRouteName="Home" drawerPosition='right'>
         <Drawer.Screen name="Home" component={HomeStackScreen} />
         <Drawer.Screen name="Pets" component={Pets} />
         <Drawer.Screen name="Medicine" component={Medicine} />

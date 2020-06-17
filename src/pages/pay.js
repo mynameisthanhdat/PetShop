@@ -1,21 +1,21 @@
 import React from 'react';
 import {
-    SafeAreaView,
     StyleSheet,
     ScrollView,
     View,
     Text,
-    StatusBar,
     TouchableOpacity
 } from 'react-native';
 
 
-const Cart = ({ navigation }) => {
+const Pay = ({ navigation }) => {
+    const { nav, route } = this.props;
+    const { name, price, img } = route.params;
     return (
         <View>
-            <Text>Cart page</Text>
+            <Text>{name}</Text>
         </View>
     )
 }
-export default Cart;
+export default Pay;
 

@@ -8,10 +8,14 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 export default class Info extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor(props, route) {
+        super(props, route);
         this.state = {
-            value: 0
+            value: 0,
+            route: this.props,
+            name: route.name,
+            price: route.price,
+            img: route.img
         }
     }
     render() {
@@ -25,7 +29,11 @@ export default class Info extends React.Component {
                 </View>
                 <View style={styles.cart}>
                     <Text style={styles.price}>Giá: {price} VNĐ</Text>
-                    <TouchableOpacity style={styles.buy}>
+                    <TouchableOpacity style={styles.buy} onPress={() => nav.navigate('Pay', {
+                        name: this.props.name,
+                        price: this.props.price,
+                        img: this.props.img,
+                    })}>
                         <Icon name='shoppingcart' style={styles.iconCart} size={20} />
                         <Text style={styles.textCart}>Mua ngay</Text>
                     </TouchableOpacity>

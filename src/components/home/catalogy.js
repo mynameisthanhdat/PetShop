@@ -9,19 +9,19 @@ export default class Catalogy extends React.Component {
             <View style={styles.container}>
                 <View style={styles.catalogy}>
                     <TouchableOpacity style={styles.choose} onPress={() => nav.navigate('Dogs')}>
-                        <Image source={require('../../images/alaska.jpg')} style={styles.img} />
+                        <Image source={require('../../images/corgi.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Chó</Text>
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.choose}>
-                        <Image source={require('../../images/alaska.jpg')} style={styles.img} />
+                        <Image source={require('../../images/meo.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Mèo</Text>
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.choose}>
-                        <Image source={require('../../images/alaska.jpg')} style={styles.img} />
+                        <Image source={require('../../images/medicine.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Thuốc</Text>
                         </View>
@@ -29,19 +29,19 @@ export default class Catalogy extends React.Component {
                 </View>
                 <View style={styles.catalogy}>
                     <TouchableOpacity style={styles.choose}>
-                        <Image source={require('../../images/alaska.jpg')} style={styles.img} />
+                        <Image source={require('../../images/petfood.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Thức ăn</Text>
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.choose}>
-                        <Image source={require('../../images/alaska.jpg')} style={styles.img} />
+                        <Image source={require('../../images/stuff.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Đồ dùng</Text>
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.choose}>
-                        <Image source={require('../../images/alaska.jpg')} style={styles.img} />
+                        <Image source={require('../../images/other.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Khác</Text>
                         </View>
