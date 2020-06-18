@@ -14,7 +14,7 @@ export default class Catalogy extends React.Component {
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Chó</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.choose}>
+                    <TouchableOpacity style={styles.choose} onPress={() => nav.navigate('Cats')}>
                         <Image source={require('../../images/meo.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Mèo</Text>

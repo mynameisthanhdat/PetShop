@@ -9,6 +9,7 @@ import Medicine from './src/pages/medicine';
 import History from './src/pages/history';
 import Header from './src/components/header/header';
 import Dogs from './src/pages/dogs';
+import Cats from './src/pages/cats';
 import Detail from './src/pages/detail';
 import Cart from './src/pages/cart';
 import Sale from './src/pages/sale';
@@ -21,6 +22,7 @@ const HomeStackScreen = () => (
   <HomeStack.Navigator>
     <HomeStack.Screen name="Home" component={Home} />
     <HomeStack.Screen name="Dogs" component={Dogs} />
+    <HomeStack.Screen name="Cats" component={Cats} />
     <HomeStack.Screen name="Detail" component={Detail} />
     <HomeStack.Screen name="Sale" component={Sale} />
     <HomeStack.Screen name="Cart" component={Cart} />
