@@ -3,16 +3,17 @@ import Slideshow from 'react-native-image-slider-show';
 export default class SlideshowTest extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             position: 1,
             interval: null,
             dataSource: [
                 {
                     url: 'https://www.chotot.com/kinhnghiem/wp-content/uploads/2018/06/cho-alaska-standard-cho-tot.jpg',
-                }, {
+                },
+                {
                     url: 'https://giongthuanchung.com/wp-content/uploads/2019/01/Samoyed-lai-Alaska-2.jpg   ',
-                }, {
+                },
+                {
                     url: 'https://trumboss.vn/wp-content/uploads/2018/11/giong-cho-Alaskan-Malamute.jpg',
                 },
             ],

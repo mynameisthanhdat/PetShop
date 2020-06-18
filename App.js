@@ -22,8 +22,8 @@ const HomeStackScreen = () => (
     <HomeStack.Screen name="Home" component={Home} />
     <HomeStack.Screen name="Dogs" component={Dogs} />
     <HomeStack.Screen name="Detail" component={Detail} />
-    <HomeStack.Screen name="Cart" component={Cart} />
     <HomeStack.Screen name="Sale" component={Sale} />
+    <HomeStack.Screen name="Cart" component={Cart} />
     <HomeStack.Screen name="Pay" component={Pay} />
   </HomeStack.Navigator>
 );

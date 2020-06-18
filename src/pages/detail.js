@@ -9,7 +9,7 @@ const Detail = ({ navigation, route }) => {
 
     return (
         <View>
-            <Slide />
+            <Slide route={route} />
             <Info nav={navigation} route={route} />
         </View>
     )

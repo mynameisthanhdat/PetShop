@@ -19,7 +19,7 @@ class Sale extends React.Component {
         }
     }
     render() {
-        const { route, naviagtion } = this.props;
+        const { route, navigation } = this.props;
         const { name, price, img, benefit, ingredient } = route.params;
         return (
             <ScrollView>
@@ -45,7 +45,11 @@ class Sale extends React.Component {
                             }}
                             style={styles.inputSpinner}
                         />
-                        <TouchableOpacity style={styles.buy} onPress={() => naviagtion.navigate('Pay')}>
+                        <TouchableOpacity style={styles.buy} onPress={() => navigation.navigate('Pay', {
+                            name: name,
+                            price: price,
+                            img: img,
+                        })}>
                             <Icon name='shoppingcart' style={styles.iconCart} size={20} />
                             <Text style={styles.textCart}>Mua ngay</Text>
                         </TouchableOpacity>
