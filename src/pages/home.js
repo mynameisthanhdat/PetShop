@@ -27,7 +27,7 @@ const Home = ({ navigation }) => {
                 <View style={styles.listdeal}>
                     <View style={styles.titlecontainer}>
                         <Text style={styles.title}>Hot</Text>
-                        <TouchableOpacity style={styles.chevron}>
+                        <TouchableOpacity style={styles.chevron} onPress={() => navigation.navigate('SaleItem')}>
                             <Text style={styles.seemore}>Nhiều hơn</Text>
                             <Icon name="chevron-thin-right" size={14} style={styles.iconRight} />
                         </TouchableOpacity>

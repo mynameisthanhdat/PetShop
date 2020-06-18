@@ -92,7 +92,7 @@ export default class Home extends React.Component {
                     </View>
                     <View style={styles.nameInfo}>
                         <View>
-                            <Text style={styles.name}>{item.name}</Text>
+                            <Text numberOfLines={1} style={styles.name}>{item.name}</Text>
                         </View>
                         <View>
                             <Text style={styles.info}>Giống: {item.gentle}</Text>

@@ -11,7 +11,7 @@ import Header from './src/components/header/header';
 import Dogs from './src/pages/dogs';
 import Cats from './src/pages/cats';
 import Detail from './src/pages/detail';
-import Cart from './src/pages/cart';
+import SaleItem from './src/pages/saleItem';
 import Sale from './src/pages/sale';
 import Pay from './src/pages/pay';
 
@@ -25,7 +25,7 @@ const HomeStackScreen = () => (
     <HomeStack.Screen name="Cats" component={Cats} />
     <HomeStack.Screen name="Detail" component={Detail} />
     <HomeStack.Screen name="Sale" component={Sale} />
-    <HomeStack.Screen name="Cart" component={Cart} />
+    <HomeStack.Screen name="SaleItem" component={SaleItem} />
     <HomeStack.Screen name="Pay" component={Pay} />
   </HomeStack.Navigator>
 );
