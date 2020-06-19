@@ -20,7 +20,7 @@ export default class Catalogy extends React.Component {
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Mèo</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.choose}>
+                    <TouchableOpacity style={styles.choose} onPress={() => nav.navigate('Medicine')}>
                         <Image source={require('../../images/medicine.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Thuốc</Text>
@@ -28,19 +28,19 @@ export default class Catalogy extends React.Component {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.catalogy}>
-                    <TouchableOpacity style={styles.choose}>
+                    <TouchableOpacity style={styles.choose} onPress={() => nav.navigate('Food')}>
                         <Image source={require('../../images/petfood.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Thức ăn</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.choose}>
+                    <TouchableOpacity style={styles.choose} onPress={() => nav.navigate('Stuff')}>
                         <Image source={require('../../images/stuff.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Đồ dùng</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.choose}>
+                    <TouchableOpacity style={styles.choose} onPress={() => nav.navigate('Another')}>
                         <Image source={require('../../images/other.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Khác</Text>

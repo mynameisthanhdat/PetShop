@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { View, Text } from 'react-native';
 import {
     createDrawerNavigator,
     DrawerContentScrollView,
@@ -6,20 +7,12 @@ import {
     DrawerItem,
 } from '@react-navigation/drawer';
 
-const CustomDrawerContent = (props) => {
-    return (
-        <DrawerContentScrollView {...props}>
-            <DrawerItemList {...props} />
-            <DrawerItem
-                label="Close drawer"
-                onPress={() => props.navigation.closeDrawer()}
-            />
-            <DrawerItem
-                label="Toggle drawer"
-                onPress={() => props.navigation.toggleDrawer()}
-            />
-        </DrawerContentScrollView>
-    );
+export default class DrawerContent extends React.Component {
+    render() {
+        return (
+            <View>
+                <Text>PET SHOT</Text>
+            </View>
+        );
+    }
 }
-
-export default CustomDrawerContent;

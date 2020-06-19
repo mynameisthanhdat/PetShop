@@ -8,18 +8,24 @@ import {
     StatusBar,
     TouchableOpacity
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Entypo';
-
+import Icon from 'react-native-vector-icons/AntDesign';
+import HeaderBar from '../components/header/headerBar';
 import HotItem from '../components/home/hotItem';
 import Catalogy from '../components/home/catalogy';
 
 const Home = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
+            <HeaderBar nav={navigation} />
             <ScrollView
                 showsVerticalScrollIndicator={false}>
                 <View style={styles.listcardTop}>
-                    <Text style={styles.titleCatalogue}>Danh mục</Text>
+                    <View style={styles.menu}>
+                        <Text style={styles.titleCatalogue}>Danh mục</Text>
+                        {/* <TouchableOpacity onPress={() => navigation.openDrawer()}>
+                            <Icon name="menu-unfold" size={25} style={styles.iconMenu} />
+                        </TouchableOpacity> */}
+                    </View>
                     <View style={styles.listcard}>
                         <Catalogy nav={navigation} />
                     </View>
@@ -29,7 +35,7 @@ const Home = ({ navigation }) => {
                         <Text style={styles.title}>Hot</Text>
                         <TouchableOpacity style={styles.chevron} onPress={() => navigation.navigate('SaleItem')}>
                             <Text style={styles.seemore}>Nhiều hơn</Text>
-                            <Icon name="chevron-thin-right" size={14} style={styles.iconRight} />
+                            <Icon name="right" size={14} style={styles.iconRight} />
                         </TouchableOpacity>
                     </View>
                     <View>
@@ -49,6 +55,13 @@ const styles = StyleSheet.create({
     },
     listcardTop: {
         backgroundColor: '#fff',
+    },
+    menu: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    iconMenu: {
+        margin: 10,
     },
     listcard: {
         flexDirection: 'row',
@@ -70,6 +83,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         marginVertical: 5,
         marginLeft: 20,
+        marginTop: 5,
     },
     seemore: {
         fontWeight: '700',

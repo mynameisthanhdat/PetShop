@@ -8,6 +8,7 @@ import {
     Dimensions,
     FlatList
 } from 'react-native';
+import HeaderBar from '../components/header/headerBar';
 import Icon from 'react-native-vector-icons/Feather';
 import Icon1 from 'react-native-vector-icons/FontAwesome5';
 const data = [
@@ -111,12 +112,13 @@ export default class Home extends React.Component {
         const { navigation } = this.props;
         return (
             <View style={styles.container}>
-                <View>
+                <HeaderBar nav={navigation} />
+                {/* <View>
                     <TouchableOpacity style={styles.btn}>
                         <Icon1 name='grin-hearts' size={20} style={styles.iconLove} />
                         <Text style={styles.button}>Yêu thích</Text>
                     </TouchableOpacity>
-                </View>
+                </View> */}
                 <FlatList
                     data={this.state.data}
                     renderItem={({ item }) => this.renderItem(item, navigation)}
