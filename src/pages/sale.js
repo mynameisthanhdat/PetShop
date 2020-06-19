@@ -9,6 +9,7 @@ import {
     Dimensions
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import Header from '../components/header/header';
 
 class Sale extends React.Component {
     constructor(props) {
@@ -21,35 +22,39 @@ class Sale extends React.Component {
         const { route, navigation } = this.props;
         const { name, price, img, benefit, ingredient } = route.params;
         return (
-            <ScrollView>
-                <View style={styles.container}>
-                    <View style={styles.info}>
-                        <Image source={{ uri: img }} style={styles.img} />
-                        <View style={styles.namePrice}>
-                            <Text style={styles.name}>{name}</Text>
-                            <Text style={styles.price}>{(price * 0.7).toFixed(0)} VNĐ</Text>
-                            <Text style={styles.priceUnder}>{price} VNĐ</Text>
+            <View style={{ marginBottom: 20 }}>
+                <Header nav={navigation} />
+                <ScrollView>
+                    <View style={styles.container}>
+                        <View style={styles.info}>
+                            <Image source={{ uri: img }} style={styles.img} />
+                            <View style={styles.namePrice}>
+                                <Text style={styles.name}>{name}</Text>
+                                <Text style={styles.price}>Giá: {(price * 0.7).toFixed(0)} VNĐ</Text>
+                                <Text style={styles.priceUnder}>{price} VNĐ</Text>
+                            </View>
+                        </View>
+                        <View style={styles.cart}>
+                            <View></View>
+                            <TouchableOpacity style={styles.buy} onPress={() => navigation.navigate('Pay', {
+                                name: name,
+                                price: price,
+                                img: img,
+                            })}>
+                                <Icon name='shoppingcart' style={styles.iconCart} size={20} />
+                                <Text style={styles.textCart}>Mua ngay</Text>
+                            </TouchableOpacity>
+                        </View>
+                        <View style={styles.infoFood}>
+                            <Text style={styles.text}>Lợi ích</Text>
+                            <Text style={styles.benefit}>{benefit}</Text>
+                            <Text style={styles.text}>Thành phần</Text>
+                            <Text style={styles.benefit}>{ingredient}</Text>
                         </View>
                     </View>
-                    <View style={styles.cart}>
-                        <View></View>
-                        <TouchableOpacity style={styles.buy} onPress={() => navigation.navigate('Pay', {
-                            name: name,
-                            price: price,
-                            img: img,
-                        })}>
-                            <Icon name='shoppingcart' style={styles.iconCart} size={20} />
-                            <Text style={styles.textCart}>Mua ngay</Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.infoFood}>
-                        <Text style={styles.text}>Lợi ích</Text>
-                        <Text style={styles.benefit}>{benefit}</Text>
-                        <Text style={styles.text}>Thành phần</Text>
-                        <Text style={styles.benefit}>{ingredient}</Text>
-                    </View>
-                </View>
-            </ScrollView>
+                </ScrollView>
+            </View>
+
         )
     }
 }
@@ -60,6 +65,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         backgroundColor: '#fff',
+        marginBottom: 20
     },
     info: {
         flexDirection: 'row'

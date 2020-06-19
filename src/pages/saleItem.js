@@ -152,12 +152,18 @@ export default class SaleItem extends React.Component {
                             <Text numberOfLines={1} style={styles.name}>{item.name}</Text>
                         </View>
                         <View>
-                            <Text style={styles.price}>Giá: {item.price} VNĐ</Text>
+                            {/* <Text style={styles.price}>Giá: {item.price} VNĐ</Text> */}
+                            <Text style={styles.price}>Giá: {(item.price * 0.85).toFixed(0)} VNĐ</Text>
                         </View>
+                        <Text style={styles.priceUnder}>{item.price} VNĐ</Text>
+
                         <View style={{ flexDirection: 'row', marginTop: 5, }}>
                             <Text>Xem ngay!!!</Text>
                             <Icon name="arrow-right-circle" size={20} style={styles.iconVIew} />
                         </View>
+                    </View>
+                    <View style={styles.saleOff}>
+                        <Text style={styles.saleOffText}>-30%</Text>
                     </View>
                 </View>
             </TouchableOpacity>
@@ -171,7 +177,7 @@ export default class SaleItem extends React.Component {
                 <View>
                     <TouchableOpacity style={styles.btn}>
                         <Icon1 name='grin-hearts' size={20} style={styles.iconLove} />
-                        <Text style={styles.button}>Yêu thích</Text>
+                        <Text style={styles.button}>Giảm giá</Text>
                     </TouchableOpacity>
                 </View>
                 <FlatList
@@ -201,7 +207,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1,
-        height: Dimensions.get('window').width * 0.7,
+        height: Dimensions.get('window').width * 0.73,
         width: Dimensions.get('window').width * 0.48,
     },
     image_container: {
@@ -229,6 +235,10 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#234567'
     },
+    priceUnder: {
+        textDecorationLine: 'line-through',
+        color: '#ABB0B8',
+    },
     info: {
         fontSize: 15,
     },
@@ -255,5 +265,13 @@ const styles = StyleSheet.create({
     iconLove: {
         color: '#fff',
         marginRight: 5,
+    },
+    saleOff: {
+        position: 'absolute',
+        backgroundColor: '#E4828B',
+        paddingHorizontal: 8,
+        paddingVertical: 1,
+        top: 0,
+        left: 0
     },
 });

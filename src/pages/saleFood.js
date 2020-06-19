@@ -20,7 +20,7 @@ class Sale extends React.Component {
     }
     render() {
         const { route, navigation } = this.props;
-        const { name, price, img, benefit, ingredient, ban, protect, note, tutorial } = route.params;
+        const { name, price, img, benefit, ingredient } = route.params;
         return (
             <View style={{ marginBottom: 20 }}>
                 <Header nav={navigation} />
@@ -49,14 +49,6 @@ class Sale extends React.Component {
                             <Text style={styles.benefit}>{benefit}</Text>
                             <Text style={styles.text}>Thành phần</Text>
                             <Text style={styles.benefit}>{ingredient}</Text>
-                            <Text style={styles.text}>Hướng dẫn sử dụng</Text>
-                            <Text style={styles.benefit}>{tutorial}</Text>
-                            <Text style={styles.text}>Chú ý</Text>
-                            <Text style={styles.benefit}>{note}</Text>
-                            <Text style={styles.text}>Chống chỉ định</Text>
-                            <Text style={styles.benefit}>{ban}</Text>
-                            <Text style={styles.text}>Bảo quản</Text>
-                            <Text style={styles.benefit}>{protect}</Text>
                         </View>
                     </View>
                 </ScrollView>
@@ -82,8 +74,7 @@ const styles = StyleSheet.create({
     namePrice: {
         alignItems: 'center',
         marginLeft: '5%',
-        alignSelf: 'center',
-        width: Dimensions.get('window').width * 0.48,
+        alignSelf: 'center'
     },
     name: {
         fontSize: 18,

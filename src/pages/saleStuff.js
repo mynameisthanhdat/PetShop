@@ -20,12 +20,12 @@ class Sale extends React.Component {
     }
     render() {
         const { route, navigation } = this.props;
-        const { name, price, img, benefit, ingredient, ban, protect, note, tutorial } = route.params;
+        const { name, price, img, code, trademark } = route.params;
         return (
             <View style={{ marginBottom: 20 }}>
                 <Header nav={navigation} />
-                <ScrollView style={{ marginBottom: 20 }}>
-                    <View style={styles.container}>
+                <ScrollView style={styles.container}>
+                    <View >
                         <View style={styles.info}>
                             <Image source={{ uri: img }} style={styles.img} />
                             <View style={styles.namePrice}>
@@ -45,18 +45,10 @@ class Sale extends React.Component {
                             </TouchableOpacity>
                         </View>
                         <View style={styles.infoFood}>
-                            <Text style={styles.text}>Lợi ích</Text>
-                            <Text style={styles.benefit}>{benefit}</Text>
-                            <Text style={styles.text}>Thành phần</Text>
-                            <Text style={styles.benefit}>{ingredient}</Text>
-                            <Text style={styles.text}>Hướng dẫn sử dụng</Text>
-                            <Text style={styles.benefit}>{tutorial}</Text>
-                            <Text style={styles.text}>Chú ý</Text>
-                            <Text style={styles.benefit}>{note}</Text>
-                            <Text style={styles.text}>Chống chỉ định</Text>
-                            <Text style={styles.benefit}>{ban}</Text>
-                            <Text style={styles.text}>Bảo quản</Text>
-                            <Text style={styles.benefit}>{protect}</Text>
+                            <Text style={styles.text}>Thương hiệu</Text>
+                            <Text style={styles.benefit}>{trademark}</Text>
+                            <Text style={styles.text}>Mã sản phẩm</Text>
+                            <Text style={styles.benefit}>{code}</Text>
                         </View>
                     </View>
                 </ScrollView>
@@ -71,6 +63,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         backgroundColor: '#fff',
+        marginBottom: 20
     },
     info: {
         flexDirection: 'row'
@@ -94,6 +87,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: '600',
         color: '#084B8A',
+        marginRight: '5%',
     },
     priceUnder: {
         textDecorationLine: 'line-through',

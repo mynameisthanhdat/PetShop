@@ -40,12 +40,12 @@ export default class Catalogy extends React.Component {
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Đồ dùng</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.choose} onPress={() => nav.navigate('Another')}>
+                    {/* <TouchableOpacity style={styles.choose} onPress={() => nav.navigate('Another')}>
                         <Image source={require('../../images/other.jpg')} style={styles.img} />
                         <View style={styles.name}>
                             <Text style={{ fontSize: 15, fontWeight: '700' }}>Khác</Text>
                         </View>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
             </View>
         );
@@ -64,8 +64,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         elevation: 45,
         marginBottom: 15,
-        marginLeft: '7%',
-        marginRight: '6%',
+        marginLeft: '8%',
+        marginRight: '3%',
         borderRadius: 10,
         height: Dimensions.get('window').width * 0.25, // approximate a square
         width: Dimensions.get('window').width * 0.2,
@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     catalogy: {
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'center'
     },
     name: {
         alignItems: 'center',

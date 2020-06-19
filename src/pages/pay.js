@@ -12,7 +12,7 @@ import {
 import InputSpinner from "react-native-input-spinner";
 import { TextInput } from 'react-native-gesture-handler';
 import Textarea from 'react-native-textarea';
-
+import Header from '../components/header/header';
 class Pay extends React.Component {
     constructor(props) {
         super(props);
@@ -21,10 +21,11 @@ class Pay extends React.Component {
         }
     }
     render() {
-        const { route } = this.props;
+        const { route, navigation } = this.props;
         const { name, price, img, char } = route.params;
         return (
             <ScrollView>
+                <Header nav={navigation} />
                 <View style={styles.container}>
                     <View style={styles.imgInfo}>
                         <Image source={{ uri: img }} style={styles.img} />

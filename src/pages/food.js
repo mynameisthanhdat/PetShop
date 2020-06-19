@@ -136,10 +136,11 @@ export default class Home extends React.Component {
 
     renderItem = (item, navigation) => {
         return (
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Sale',
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('SaleFood',
                 {
                     name: item.name,
                     img: item.img,
+                    price: item.price,
                     benefit: item.benefit,
                     ingredient: item.ingredient,
                 }

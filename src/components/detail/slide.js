@@ -20,6 +20,15 @@ export default class SlideshowTest extends React.Component {
         };
     }
 
+    // componentDidMount() {
+    //     const { img } = this.props.route.params;
+    //     console.log(img);
+
+    //     this.setState({
+    //         dataSource: img
+    //     })
+    // }
+
     componentWillMount() {
         this.setState({
             interval: setInterval(() => {

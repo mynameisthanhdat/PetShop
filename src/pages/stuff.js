@@ -14,54 +14,67 @@ import HeaderBar from '../components/header/headerBar';
 
 const data = [
     {
-        name: 'Mèo Anh lông ngắn',
-        img: 'https://thegioiloaimeo.com/wp-content/uploads/2019/12/meo-anh-long-ngan2.jpg',
-        gentle: 'Đực',
-        source: 'Việt Nam',
-        char: 'Lông ngăn - xám, mắt nâu',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
-        price: 7000000,
+        name: 'Dây dắt cho chó 1.2x100 (cm)',
+        img: 'https://www.petcity.vn/media/product/250_4182_up_pet.png',
+        price: '178.000',
+        trademark: 'CTC Bio (Korea)',
+        code: 'PETCTC15640165'
     },
     {
-        name: 'Mèo Anh lông dài',
-        img: 'https://dogily.vn/wp-content/uploads/2020/03/meo-anh-long-dai-de-thuong.jpg',
-        gentle: 'Cái',
-        source: 'Việt Nam',
-        char: 'Lông dài - trắng, mắt xanh',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
-        price: 7000000,
+        name: 'Vòng cổ chuông hoa 1.5cm',
+        img: 'https://www.petcity.vn/media/product/250_2432_',
+        price: '29.000',
+        trademark: '',
+        code: 'PETJCC114'
     },
     {
-        name: 'Mèo Ba Tư',
-        img: 'https://lolipet.net/wp-content/uploads/exoticshorthair3.png',
-        gentle: 'Đực',
-        source: 'Việt Nam',
-        char: 'Lông dày - đen trắng, mặt ngắn',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
-        price: 7000000,
+        name: 'CTCBio - Vòng cổ dài',
+        img: 'https://www.petcity.vn/media/product/250_4172_',
+        price: '79.000',
+        trademark: 'CTC Bio (Korea)',
+        code: 'PETCTC15640162'
     },
     {
-        name: 'Mèo Turkish Angora Thổ Nhĩ Kỳ',
-        img: 'https://vuongquocloaivat.com/wp-content/uploads/2018/10/meo-angora.jpg',
-        gentle: 'Cái',
-        source: 'Việt Nam',
-        char: 'Lông dài - trắng, đuôi dài',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
-        price: 7000000,
+        name: 'CTCBio - Lồng vận chuyển lớn',
+        img: 'https://www.petcity.vn/media/product/250_4170_',
+        price: '658.000',
+        trademark: 'CTC Bio (Korea)',
+        code: 'PETCTC15640160'
     },
     {
-        name: 'Mèo tai cụp Scottish Fold',
-        img: 'https://jandpet.com.vn/wp-content/uploads/2018/07/anh-3.jpeg',
-        gentle: 'Đực',
-        source: 'Việt Nam',
-        char: 'Lông dày - nâu , tai cụp',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
-        price: 7000000,
+        name: 'Flexi New Neon - Dây dắt tự động size M',
+        img: 'https://www.petcity.vn/media/product/250_3476_flexi_neon_cord.jpg',
+        price: '570.000',
+        trademark: 'Flexi (Đức)',
+        code: 'PETC308483'
+    },
+    {
+        name: 'Áo bí ngô size S',
+        img: 'https://www.petcity.vn/media/product/250_3252_ao_ni_bi_ngo_petcity_1.jpg',
+        price: '320.000',
+        trademark: 'PetStar',
+        code: 'PETCH044S'
+    },
+    {
+        name: 'Petstar - Áo công chúa size 1',
+        img: 'https://www.petcity.vn/media/product/250_3122_3121_untitleeeeeeeeeeed.jpg',
+        price: '210.000',
+        trademark: 'CTC Bio (Korea)',
+        code: 'PETCH031S'
+    },
+    {
+        name: 'Nệm lông thú ABC size 4',
+        img: 'https://www.petcity.vn/media/product/250_4181_aaa.jpg',
+        price: '471.000',
+        trademark: 'ABC',
+        code: 'PETABC27'
+    },
+    {
+        name: 'Balo vận chuyển chó mèo Phi hành gia (da)',
+        img: 'https://www.petcity.vn/media/product/250_2578_ba_lo_phi_hanh_gia_da_petcity_3.jpg',
+        price: '560.000',
+        trademark: 'Petstar',
+        code: 'PETMYB2'
     },
 ]
 const numColumns = 2;
@@ -76,16 +89,13 @@ export default class Home extends React.Component {
 
     renderItem = (item, navigation) => {
         return (
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Detail',
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('SaleStuff',
                 {
                     name: item.name,
-                    source: item.source,
-                    char: item.char,
-                    longevity: item.longevity,
-                    price: item.price,
-                    old: item.old,
                     img: item.img,
-                    gentle: item.gentle
+                    price: item.price,
+                    trademark: item.trademark,
+                    code: item.code
                 }
             )} >
                 <View style={styles.item}>
@@ -95,9 +105,6 @@ export default class Home extends React.Component {
                     <View style={styles.nameInfo}>
                         <View>
                             <Text numberOfLines={1} style={styles.name}>{item.name}</Text>
-                        </View>
-                        <View>
-                            <Text style={styles.info}>Giống: {item.gentle}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text>Xem ngay!!!</Text>
@@ -114,12 +121,6 @@ export default class Home extends React.Component {
         return (
             <View style={styles.container}>
                 <HeaderBar nav={navigation} />
-                {/* <View>
-                    <TouchableOpacity style={styles.btn}>
-                        <Icon1 name='grin-hearts' size={20} style={styles.iconLove} />
-                        <Text style={styles.button}>Yêu thích</Text>
-                    </TouchableOpacity>
-                </View> */}
                 <FlatList
                     data={this.state.data}
                     renderItem={({ item }) => this.renderItem(item, navigation)}
@@ -135,7 +136,7 @@ export default class Home extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F1EEEE'
+        backgroundColor: '#F1EEEE',
     },
     item: {
         marginTop: 5,
