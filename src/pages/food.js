@@ -14,54 +14,114 @@ import HeaderBar from '../components/header/headerBar';
 
 const data = [
     {
-        name: 'Mèo Anh lông ngắn',
-        img: 'https://thegioiloaimeo.com/wp-content/uploads/2019/12/meo-anh-long-ngan2.jpg',
-        gentle: 'Đực',
-        source: 'Việt Nam',
-        char: 'Lông ngăn - xám, mắt nâu',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
-        price: 7000000,
+        name: 'Thức ăn khô',
+        price: 135000,
+        img: 'https://bizweb.dktcdn.net/100/346/633/products/1-a9351970-df75-4706-bb64-a1571249e671.jpg?v=1553844345187', benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
     },
     {
-        name: 'Mèo Anh lông dài',
-        img: 'https://dogily.vn/wp-content/uploads/2020/03/meo-anh-long-dai-de-thuong.jpg',
-        gentle: 'Cái',
-        source: 'Việt Nam',
-        char: 'Lông dài - trắng, mắt xanh',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
-        price: 7000000,
+        name: 'Puppy 3kg',
+        price: 205000,
+        img: 'https://www.petcity.vn/media/lib/1444_SmartheartPuppy.jpg',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
     },
     {
-        name: 'Mèo Ba Tư',
-        img: 'https://lolipet.net/wp-content/uploads/exoticshorthair3.png',
-        gentle: 'Đực',
-        source: 'Việt Nam',
-        char: 'Lông dày - đen trắng, mặt ngắn',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
-        price: 7000000,
+        name: 'Thức ăn khô',
+        price: 135000,
+        img: 'https://lh3.googleusercontent.com/proxy/AP9rnALq81BQJ5lNe4XddH8VlHBlchbA9ZjkIx_uMNlxOCJhkyyiriJlbpoX4_IjrxqYqDwf54k9DKxTdgtkmth-ot-ljHDQFxJSAA',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
     },
     {
-        name: 'Mèo Turkish Angora Thổ Nhĩ Kỳ',
-        img: 'https://vuongquocloaivat.com/wp-content/uploads/2018/10/meo-angora.jpg',
-        gentle: 'Cái',
-        source: 'Việt Nam',
-        char: 'Lông dài - trắng, đuôi dài',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
-        price: 7000000,
+        name: 'Thức ăn khô',
+        price: 135000,
+        img: 'https://vietpetmart.com/upload/sanpham/1840db1b2cd7cc8995c6-0514.jpg',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
     },
     {
-        name: 'Mèo tai cụp Scottish Fold',
-        img: 'https://jandpet.com.vn/wp-content/uploads/2018/07/anh-3.jpeg',
-        gentle: 'Đực',
-        source: 'Việt Nam',
-        char: 'Lông dày - nâu , tai cụp',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
-        price: 7000000,
+        name: 'Thức ăn khô',
+        price: 135000,
+        img: 'https://bizweb.dktcdn.net/100/346/633/products/1-a9351970-df75-4706-bb64-a1571249e671.jpg?v=1553844345187',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Pate vị bò và gan cho chó 400g (dạng lon)',
+        price: 135000,
+        img: 'https://www.petcity.vn/media/product/250_2174_pate_smartheart_lon_v____g___t__y_cho_ch___400gr.jpg',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Thức ăn dinh dưỡng cho chó to vị bò nướng (1.5kg)',
+        price: 98000,
+        img: 'https://yolo.vn/wp-content/uploads/2019/07/hinh-anh-thuc-an-royal-canin-poodle-puppy-cho-poodle-con-1.jpg',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Thức ăn khô',
+        price: 135000,
+        img: 'https://www.vietpet.net/wp-content/uploads/2019/12/thuc-an-cho-cho-con-classic-pets-milk-flavour.jpg',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Thức ăn khô',
+        price: 135000,
+        img: 'https://bizweb.dktcdn.net/100/346/633/products/1-a9351970-df75-4706-bb64-a1571249e671.jpg?v=1553844345187', benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Puppy 3kg',
+        price: 205000,
+        img: 'https://www.petcity.vn/media/lib/1444_SmartheartPuppy.jpg',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Thức ăn khô',
+        price: 135000,
+        img: 'https://lh3.googleusercontent.com/proxy/AP9rnALq81BQJ5lNe4XddH8VlHBlchbA9ZjkIx_uMNlxOCJhkyyiriJlbpoX4_IjrxqYqDwf54k9DKxTdgtkmth-ot-ljHDQFxJSAA',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Thức ăn khô',
+        price: 135000,
+        img: 'https://vietpetmart.com/upload/sanpham/1840db1b2cd7cc8995c6-0514.jpg',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Thức ăn khô',
+        price: 135000,
+        img: 'https://bizweb.dktcdn.net/100/346/633/products/1-a9351970-df75-4706-bb64-a1571249e671.jpg?v=1553844345187',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Pate vị bò và gan cho chó 400g (dạng lon)',
+        price: 135000,
+        img: 'https://www.petcity.vn/media/product/250_2174_pate_smartheart_lon_v____g___t__y_cho_ch___400gr.jpg',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Thức ăn dinh dưỡng cho chó to vị bò nướng (1.5kg)',
+        price: 98000,
+        img: 'https://yolo.vn/wp-content/uploads/2019/07/hinh-anh-thuc-an-royal-canin-poodle-puppy-cho-poodle-con-1.jpg',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
+    },
+    {
+        name: 'Thức ăn khô',
+        price: 135000,
+        img: 'https://www.vietpet.net/wp-content/uploads/2019/12/thuc-an-cho-cho-con-classic-pets-milk-flavour.jpg',
+        benefit: 'Không chứa gluten gây kích thích đường ruột ở chó. Thức ăn vị thịt bò kích thích chó ăn ngon miệng, phù hợp khẩu vị của chó Thức ăn cho chó MOSHM được chế biến riêng theo nhu cầu dinh dưỡng của chó cỡ nhỏ Giúp giảm nguy cơ mắc bệnh béo phì, giữ lông luôn bóng mượt, bảo vệ mắt Giảm mùi hôi miệng và giúp răng luôn chắc khỏe Không gây kích ứng đường ruột ở chó',
+        ingredient: 'Thức ăn cho chó cỡ nhỏ MOSHM Mini Indoor Grain Free Nutrition gồm các thành phần: 65% thịt: bò, gà, vịt, dê, ngỗng, thỏ, nai, cá ngừ, cá hồi, cá tráp, cá thu ngừ, cá trắm đen 35% rau củ: đậu tương, sắn, khoai lang,khoai tây, táo, cà rốt, nấm, đường fructose, dầu hạt lanh, bột trứng, tảo biển 0% gluten từ gạo, bột mì… Thành phần chứa 65% thịt và cá thật, kết hợp rau củ quả hoàn toàn từ thiên nhiên. Thức ăn cho chó MOSHM không chứa chất bảo quản, phẩm màu, hương liệu và phụ gia thực phẩm độc hại',
     },
 ]
 const numColumns = 2;
@@ -76,16 +136,12 @@ export default class Home extends React.Component {
 
     renderItem = (item, navigation) => {
         return (
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Detail',
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Sale',
                 {
                     name: item.name,
-                    source: item.source,
-                    char: item.char,
-                    longevity: item.longevity,
-                    price: item.price,
-                    old: item.old,
                     img: item.img,
-                    gentle: item.gentle
+                    benefit: item.benefit,
+                    ingredient: item.ingredient,
                 }
             )} >
                 <View style={styles.item}>
@@ -95,9 +151,6 @@ export default class Home extends React.Component {
                     <View style={styles.nameInfo}>
                         <View>
                             <Text numberOfLines={1} style={styles.name}>{item.name}</Text>
-                        </View>
-                        <View>
-                            <Text style={styles.info}>Giống: {item.gentle}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text>Xem ngay!!!</Text>
@@ -114,12 +167,6 @@ export default class Home extends React.Component {
         return (
             <View style={styles.container}>
                 <HeaderBar nav={navigation} />
-                {/* <View>
-                    <TouchableOpacity style={styles.btn}>
-                        <Icon1 name='grin-hearts' size={20} style={styles.iconLove} />
-                        <Text style={styles.button}>Yêu thích</Text>
-                    </TouchableOpacity>
-                </View> */}
                 <FlatList
                     data={this.state.data}
                     renderItem={({ item }) => this.renderItem(item, navigation)}

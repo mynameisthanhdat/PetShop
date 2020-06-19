@@ -23,6 +23,7 @@ import Detail from './src/pages/detail';
 import SaleItem from './src/pages/saleItem';
 import Sale from './src/pages/sale';
 import Pay from './src/pages/pay';
+import SaleMedicine from './src/pages/saleMedicine';
 
 const Drawer = createDrawerNavigator();
 
@@ -44,6 +45,7 @@ const HomeStackScreen = () => (
     <HomeStack.Screen name="Sale" component={Sale} />
     <HomeStack.Screen name="SaleItem" component={SaleItem} />
     <HomeStack.Screen name="Pay" component={Pay} />
+    <HomeStack.Screen name="SaleMedicine" component={SaleMedicine} />
   </HomeStack.Navigator>
 );
 

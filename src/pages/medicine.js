@@ -14,55 +14,61 @@ import HeaderBar from '../components/header/headerBar';
 
 const data = [
     {
-        name: 'Mèo Anh lông ngắn',
-        img: 'https://thegioiloaimeo.com/wp-content/uploads/2019/12/meo-anh-long-ngan2.jpg',
-        gentle: 'Đực',
-        source: 'Việt Nam',
-        char: 'Lông ngăn - xám, mắt nâu',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
+        name: 'Sữa tắm chó mèo phòng trị viêm da SKIN CARE Shampoo',
+        img: 'http://www.vemedim.com/images/Skin-care.png',
         price: 7000000,
+        benefit: 'Phòng trị các bệnh xảy ra thường xuyên trên da lông như: nấm da, viêm nang lông, viêm da có mủ, ... gây ngứa ngáy, hôi lông, rụng lông, gãy lông, da sần sùi, bong tróc.Sử dụng thường xuyên 2 lần/ tuần giúp giảm ngứa, khử mùi hôi trên da lông giúp cho thú luôn có một bộ lông sạch sẽ và siêu mượt.',
+        ingredient: 'Trong 1ml có chứa: Chlorhexidine digluconate 31,2 mg - Dung môi vừa đủ 1 ml',
+        note: 'Thoa kỹ sữa tắm vào các vùng da lông quanh mõm , dưới tai, giữa các móng để phòng trị bệnh ngoài da. Tránh để sữa tắm dính vào mắt, lọt vào trong tai',
+        ban: 'Không dùng cho chó, mèo dưới 2 tháng tuổi',
+        protect: 'Nơi khô mát, tránh ánh sáng chiếu trực tiếp , nhiệt độ không quá 30oC.',
+        tutorial: 'Làm ướt toàn bộ lông vật nuôi, xát đều sữa tắm từ đầu đến chân để tạo bọt, để yên trong 5- 10 phút, sau đó xả thật sạch bằng nước thường. Sử dụng sữa tắm 3 lần/tuần trong vòng 2-3 tuần. Lượng sữa tắm được cung cấp tùy theo kích cỡ của thú và chiều dài của  lông. '
     },
     {
-        name: 'Mèo Anh lông dài',
-        img: 'https://dogily.vn/wp-content/uploads/2020/03/meo-anh-long-dai-de-thuong.jpg',
-        gentle: 'Cái',
-        source: 'Việt Nam',
-        char: 'Lông dài - trắng, mắt xanh',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
+        name: 'Sữa tắm chó mèo phòng trị viêm da SKIN CARE Shampoo',
+        img: 'http://www.vemedim.com/images/Skin-care.png',
         price: 7000000,
+        benefit: 'Phòng trị các bệnh xảy ra thường xuyên trên da lông như: nấm da, viêm nang lông, viêm da có mủ, ... gây ngứa ngáy, hôi lông, rụng lông, gãy lông, da sần sùi, bong tróc.Sử dụng thường xuyên 2 lần/ tuần giúp giảm ngứa, khử mùi hôi trên da lông giúp cho thú luôn có một bộ lông sạch sẽ và siêu mượt.',
+        ingredient: 'Trong 1ml có chứa: Chlorhexidine digluconate 31,2 mg - Dung môi vừa đủ 1 ml',
+        note: 'Thoa kỹ sữa tắm vào các vùng da lông quanh mõm , dưới tai, giữa các móng để phòng trị bệnh ngoài da. Tránh để sữa tắm dính vào mắt, lọt vào trong tai',
+        ban: 'Không dùng cho chó, mèo dưới 2 tháng tuổi',
+        protect: 'Nơi khô mát, tránh ánh sáng chiếu trực tiếp , nhiệt độ không quá 30oC.',
+        tutorial: 'Làm ướt toàn bộ lông vật nuôi, xát đều sữa tắm từ đầu đến chân để tạo bọt, để yên trong 5- 10 phút, sau đó xả thật sạch bằng nước thường. Sử dụng sữa tắm 3 lần/tuần trong vòng 2-3 tuần. Lượng sữa tắm được cung cấp tùy theo kích cỡ của thú và chiều dài của  lông. '
     },
     {
-        name: 'Mèo Ba Tư',
-        img: 'https://lolipet.net/wp-content/uploads/exoticshorthair3.png',
-        gentle: 'Đực',
-        source: 'Việt Nam',
-        char: 'Lông dày - đen trắng, mặt ngắn',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
+        name: 'Sữa tắm chó mèo phòng trị viêm da SKIN CARE Shampoo',
+        img: 'http://www.vemedim.com/images/Skin-care.png',
         price: 7000000,
+        benefit: 'Phòng trị các bệnh xảy ra thường xuyên trên da lông như: nấm da, viêm nang lông, viêm da có mủ, ... gây ngứa ngáy, hôi lông, rụng lông, gãy lông, da sần sùi, bong tróc.Sử dụng thường xuyên 2 lần/ tuần giúp giảm ngứa, khử mùi hôi trên da lông giúp cho thú luôn có một bộ lông sạch sẽ và siêu mượt.',
+        ingredient: 'Trong 1ml có chứa: Chlorhexidine digluconate 31,2 mg - Dung môi vừa đủ 1 ml',
+        note: 'Thoa kỹ sữa tắm vào các vùng da lông quanh mõm , dưới tai, giữa các móng để phòng trị bệnh ngoài da. Tránh để sữa tắm dính vào mắt, lọt vào trong tai',
+        ban: 'Không dùng cho chó, mèo dưới 2 tháng tuổi',
+        protect: 'Nơi khô mát, tránh ánh sáng chiếu trực tiếp , nhiệt độ không quá 30oC.',
+        tutorial: 'Làm ướt toàn bộ lông vật nuôi, xát đều sữa tắm từ đầu đến chân để tạo bọt, để yên trong 5- 10 phút, sau đó xả thật sạch bằng nước thường. Sử dụng sữa tắm 3 lần/tuần trong vòng 2-3 tuần. Lượng sữa tắm được cung cấp tùy theo kích cỡ của thú và chiều dài của  lông. '
     },
     {
-        name: 'Mèo Turkish Angora Thổ Nhĩ Kỳ',
-        img: 'https://vuongquocloaivat.com/wp-content/uploads/2018/10/meo-angora.jpg',
-        gentle: 'Cái',
-        source: 'Việt Nam',
-        char: 'Lông dài - trắng, đuôi dài',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
+        name: 'Sữa tắm chó mèo phòng trị viêm da SKIN CARE Shampoo',
+        img: 'http://www.vemedim.com/images/Skin-care.png',
         price: 7000000,
+        benefit: 'Phòng trị các bệnh xảy ra thường xuyên trên da lông như: nấm da, viêm nang lông, viêm da có mủ, ... gây ngứa ngáy, hôi lông, rụng lông, gãy lông, da sần sùi, bong tróc.Sử dụng thường xuyên 2 lần/ tuần giúp giảm ngứa, khử mùi hôi trên da lông giúp cho thú luôn có một bộ lông sạch sẽ và siêu mượt.',
+        ingredient: 'Trong 1ml có chứa: Chlorhexidine digluconate 31,2 mg - Dung môi vừa đủ 1 ml',
+        note: 'Thoa kỹ sữa tắm vào các vùng da lông quanh mõm , dưới tai, giữa các móng để phòng trị bệnh ngoài da. Tránh để sữa tắm dính vào mắt, lọt vào trong tai',
+        ban: 'Không dùng cho chó, mèo dưới 2 tháng tuổi',
+        protect: 'Nơi khô mát, tránh ánh sáng chiếu trực tiếp , nhiệt độ không quá 30oC.',
+        tutorial: 'Làm ướt toàn bộ lông vật nuôi, xát đều sữa tắm từ đầu đến chân để tạo bọt, để yên trong 5- 10 phút, sau đó xả thật sạch bằng nước thường. Sử dụng sữa tắm 3 lần/tuần trong vòng 2-3 tuần. Lượng sữa tắm được cung cấp tùy theo kích cỡ của thú và chiều dài của  lông. '
     },
     {
-        name: 'Mèo tai cụp Scottish Fold',
-        img: 'https://jandpet.com.vn/wp-content/uploads/2018/07/anh-3.jpeg',
-        gentle: 'Đực',
-        source: 'Việt Nam',
-        char: 'Lông dày - nâu , tai cụp',
-        longevity: 'Lên đến tới 16 năm',
-        old: '4 tháng',
+        name: 'Sữa tắm chó mèo phòng trị viêm da SKIN CARE Shampoo',
+        img: 'http://www.vemedim.com/images/Skin-care.png',
         price: 7000000,
+        benefit: 'Phòng trị các bệnh xảy ra thường xuyên trên da lông như: nấm da, viêm nang lông, viêm da có mủ, ... gây ngứa ngáy, hôi lông, rụng lông, gãy lông, da sần sùi, bong tróc.Sử dụng thường xuyên 2 lần/ tuần giúp giảm ngứa, khử mùi hôi trên da lông giúp cho thú luôn có một bộ lông sạch sẽ và siêu mượt.',
+        ingredient: 'Trong 1ml có chứa: Chlorhexidine digluconate 31,2 mg - Dung môi vừa đủ 1 ml',
+        note: 'Thoa kỹ sữa tắm vào các vùng da lông quanh mõm , dưới tai, giữa các móng để phòng trị bệnh ngoài da. Tránh để sữa tắm dính vào mắt, lọt vào trong tai',
+        ban: 'Không dùng cho chó, mèo dưới 2 tháng tuổi',
+        protect: 'Nơi khô mát, tránh ánh sáng chiếu trực tiếp , nhiệt độ không quá 30oC.',
+        tutorial: 'Làm ướt toàn bộ lông vật nuôi, xát đều sữa tắm từ đầu đến chân để tạo bọt, để yên trong 5- 10 phút, sau đó xả thật sạch bằng nước thường. Sử dụng sữa tắm 3 lần/tuần trong vòng 2-3 tuần. Lượng sữa tắm được cung cấp tùy theo kích cỡ của thú và chiều dài của  lông. '
     },
+
 ]
 const numColumns = 2;
 
@@ -76,16 +82,17 @@ export default class Home extends React.Component {
 
     renderItem = (item, navigation) => {
         return (
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Detail',
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('SaleMedicine',
                 {
                     name: item.name,
-                    source: item.source,
-                    char: item.char,
-                    longevity: item.longevity,
                     price: item.price,
-                    old: item.old,
                     img: item.img,
-                    gentle: item.gentle
+                    benefit: item.benefit,
+                    ingredient: item.ingredient,
+                    note: item.note,
+                    ban: item.ban,
+                    protect: item.protect,
+                    tutorial: item.tutorial,
                 }
             )} >
                 <View style={styles.item}>
@@ -95,9 +102,6 @@ export default class Home extends React.Component {
                     <View style={styles.nameInfo}>
                         <View>
                             <Text numberOfLines={1} style={styles.name}>{item.name}</Text>
-                        </View>
-                        <View>
-                            <Text style={styles.info}>Giống: {item.gentle}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text>Xem ngay!!!</Text>
@@ -114,12 +118,6 @@ export default class Home extends React.Component {
         return (
             <View style={styles.container}>
                 <HeaderBar nav={navigation} />
-                {/* <View>
-                    <TouchableOpacity style={styles.btn}>
-                        <Icon1 name='grin-hearts' size={20} style={styles.iconLove} />
-                        <Text style={styles.button}>Yêu thích</Text>
-                    </TouchableOpacity>
-                </View> */}
                 <FlatList
                     data={this.state.data}
                     renderItem={({ item }) => this.renderItem(item, navigation)}
